@@ -21,33 +21,23 @@ if ($age >= 18 && $age <= 65) {
     echo "Вам ещё работать и работать<br>";
 } elseif ($age >= 65) {
     echo "Вам пора на пенсию<br>";
-} elseif ($age >= 1 && $age <= 17) {
+} elseif ($age >= 1 && $age < 18) {
     echo "Вам ещё рано работать<br>";
 } else {
     echo "Неизвестный возраст<br>";
 }
 
 // Задача 4
-$day = 6;
+$day = 7;
 switch ($day){
     case 1:
-        echo "Это рабочий день";
-        break;
     case 2:
-        echo "Это рабочий день";
-        break;
     case 3:
-        echo "Это рабочий день";
-        break;
     case 4:
-        echo "Это рабочий день";
-        break;
     case 5:
         echo "Это рабочий день";
         break;
     case 6:
-        echo "Это выходной день";
-        break;
     case 7:
         echo "Это выходной день";
         break;

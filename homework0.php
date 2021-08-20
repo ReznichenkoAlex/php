@@ -1,8 +1,8 @@
 <?php
-const testConstanta = 'asd';
-$user_name = "Igor";
+const TEST_CONSTANTA = 'asdad';
+$userName = "Igor";
 
-function show_something()
+function showSomething()
 {
     return "SOMETHING";
 }

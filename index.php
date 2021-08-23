@@ -3,7 +3,7 @@ require_once "src/functions.php";
 
 task1(['dasd', 'ewqe', 'czxvczxv', "<br>"]);
 
-task2("*", 2, 3, 2, 2);
+task2("/", 100, 4, 5, 2);
 
 task3(10, 11);
 

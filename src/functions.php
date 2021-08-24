@@ -6,7 +6,7 @@ function task1($array, $flag = false)
         return implode($array);
     }
     foreach ($array as $v) {
-        echo "<p>" . $v;
+        echo "<p>" . $v . "</p>";
     }
 }
 
@@ -14,59 +14,32 @@ function task2($sign, ...$numbers)
 {
     $result = $numbers[0];
     $resultString = "Результат: " . $result . " " . $sign . " ";
-    switch ($sign) {
-        case "+":
-            for ($i = 1; $i < sizeof($numbers); $i++) {
+    for ($i = 1; $i < sizeof($numbers); $i++){
+        switch ($sign) {
+            case "+":
                 $result += $numbers[$i];
-                if ($i === sizeof($numbers) - 1) {
-                    $resultString .= $numbers[$i] . " ";
-                } else {
-                    $resultString .= $numbers[$i] . " $sign ";
-                }
-            }
-            $resultString .= " = " . $result;
-            echo $resultString;
-            break;
-        case "-":
-            for ($i = 1; $i < sizeof($numbers); $i++) {
+                break;
+            case "-":
                 $result -= $numbers[$i];
-                if ($i === sizeof($numbers) - 1) {
-                    $resultString .= $numbers[$i] . " ";
-                } else {
-                    $resultString .= $numbers[$i] . " $sign ";
-                }
-            }
-            $resultString .= " = " . $result;
-            echo $resultString;
-            break;
-        case "*":
-            for ($i = 1; $i < sizeof($numbers); $i++) {
+                break;
+            case "*":
                 $result *= $numbers[$i];
-                if ($i === sizeof($numbers) - 1) {
-                    $resultString .= $numbers[$i] . " ";
-                } else {
-                    $resultString .= $numbers[$i] . " $sign ";
-                }
-            }
-            $resultString .= " = " . $result;
-            echo $resultString;
-            break;
-        case "/":
-            for ($i = 1; $i < sizeof($numbers); $i++) {
+                break;
+            case "/":
                 $result /= $numbers[$i];
-                if ($i === sizeof($numbers) - 1) {
-                    $resultString .= $numbers[$i] . " ";
-                } else {
-                    $resultString .= $numbers[$i] . " $sign ";
-                }
-            }
-            $resultString .= " = " . $result;
-            echo $resultString;
-            break;
-        default:
-            echo "Введен неккоректный знак";
-            break;
+                break;
+            default:
+                echo "Введен неккоректный знак";
+                return;
+        }
+        if ($i === sizeof($numbers) - 1) {
+            $resultString .= $numbers[$i] . " ";
+        } else {
+            $resultString .= $numbers[$i] . " $sign ";
+        }
     }
+    $resultString .= " = " . $result;
+    echo $resultString;
 }
 
 function task3(...$numbers)

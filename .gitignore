@@ -1,1 +1,5 @@
 .idea
+config.php
+composer.phar
+composer.lock
+vendor
